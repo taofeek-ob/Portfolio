@@ -5,6 +5,10 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
 
+import { BsTwitter } from "react-icons/bs";
+import { FiLinkedin } from "react-icons/fi";
+import { BsGithub } from "react-icons/bs";
+
 const Footer = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -50,6 +54,13 @@ const Footer = () => {
           <a href="mailto:taofeek01@yahoo.com" className="p-text">
             taofeek01@yahoo.com
           </a>
+        </div>
+        <div className="app__footer-card app__footer-social">
+          
+        <div><a href='https://github.com/taofeek-ob' target='blank'><BsGithub /></a></div>
+    <div><a href='https://twitter.com/taofeek_ob' target='blank'><BsTwitter /></a></div>
+    <div><a href='https://linkedin.com/in/taofeek-ob' target='blank'><FiLinkedin /></a></div>
+          
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
