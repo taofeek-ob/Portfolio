@@ -128,6 +128,10 @@
         color: var(--white-color);
       }
     }
+    &:hover{
+      opacity: 1 !important;
+      transition: all 0.25s ease-in-out;
+    }
   }
   
   .app__work-content {
