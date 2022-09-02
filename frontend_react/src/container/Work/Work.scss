@@ -62,6 +62,10 @@
   
       &:hover {
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        .app__work-hover{
+          opacity: 1 !important;
+          transition: all 0.25s ease-in-out;
+        }
       }
   
       @media screen and (min-width: 2000px) {
@@ -128,10 +132,7 @@
         color: var(--white-color);
       }
     }
-    &:hover{
-      opacity: 1 !important;
-      transition: all 0.25s ease-in-out;
-    }
+   
   }
   
   .app__work-content {

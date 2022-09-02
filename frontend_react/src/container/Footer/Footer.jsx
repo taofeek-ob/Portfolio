@@ -25,7 +25,8 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setLoading(true);
 
     const contact = {
@@ -85,7 +86,10 @@ const Footer = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <form
+          className="app__footer-form app__flex"
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <div className="app__flex">
             <input
               className="p-text"
@@ -118,10 +122,10 @@ const Footer = () => {
               required
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
+          <button type="submit" className="p-text">
             {!loading ? "Send Message" : "Sending..."}
           </button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3 className="head-text">Thank you for getting in touch!</h3>
